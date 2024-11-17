@@ -1,0 +1,129 @@
+/* <!--***********************************
+
+Author: Terence Onyeweke
+email: onyeweketerence@gmail.com 
+
+************************************--> */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+:root {
+    --primary: #002357;
+    --secondary: #D1634A;
+}
+
+/* GENERAL CSS FOR THE TITLES AND SECTION CAPTIONS */
+
+.head-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.head-box .title {
+    display: flex;
+    align-items: baseline;
+}
+.head-box .title img{
+    display: inline-block;
+    /* height: 3px; */
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+.head-box h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.head-box .title p {
+    color: var(--primary);
+}
+
+
+/* other pages hero */
+
+.other-hero {
+    height: 20vh; /* Adjust height dynamically relative to the viewport */
+    background-image: url('../img/background-img.png');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    width: 100%; /* Full width of parent container */
+}
+.hero-content {
+    text-align: center;
+    color: white; /* Or any contrasting color */
+    padding: 1rem; /* Space around content */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    /* transform: translateY(50%); */
+}
+
+.hero-content p {
+    font-size: 14px;
+}
+
+.profile-pic {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+
+.name {
+    color: var(--primary);
+    font-weight: 500px;
+    margin-top: 10px;
+}
+
+
+/* ul li */
+
+ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0; /* Align list to the left */
+}
+li {
+    display: flex; /* Use flexbox for proper alignment */
+    align-items: flex-start; /* Align icon and text at the top */
+    margin-bottom: 10px; /* Add space between list items */
+}
+.fa-check {
+    color: var(--secondary); /* Style for the tick icon */
+    margin-right: 10px; /* Space between icon and text */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+li span {
+    flex: 1; /* Allow the text to take up remaining space */
+}
+
+
+/* ol li */
+
+ol {
+    list-style-type: none; /* Remove default numbering */
+}
+
+ol li::before {
+    content: counter(list-item) ". "; /* Display custom numbers */
+    counter-increment: list-item;
+    color: var(--secondary); /* Set the number color to my secondary theme color */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+ol {
+    counter-reset: list-item; /* Start counting from 1 */
+}

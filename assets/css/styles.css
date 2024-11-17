@@ -5,57 +5,6 @@ email: onyeweketerence@gmail.com
 
 ************************************--> */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-* {
-  font-family: "Nunito Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100,
-    "YTLC" 500;
-}
-
-:root {
-    --primary: #002357;
-    --secondary: #D1634A;
-}
-
-/* GENERAL CSS FOR THE TITLES AND SECTION CAPTIONS */
-
-.head-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.head-box .title {
-    display: flex;
-    align-items: baseline;
-}
-.head-box .title img{
-    display: inline-block;
-    /* height: 3px; */
-    padding-bottom: 3px;
-    margin-right: 10px;
-}
-
-.head-box h2 {
-    font-size: 34px;
-    font-weight: 600;
-}
-
-.head-box .title p {
-    color: var(--primary);
-}
-
-
-
- 
- 
  /*****************************************
   Girl with head section styling 
   *******************************************/

@@ -1,0 +1,66 @@
+
+
+
+
+
+/********************************************************
+OUR TEAM SECTION
+ *********************************************************/
+
+ /* Container for the team member cards */
+ .team-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Individual team card styling */
+.team-card {
+    /* background-color: #f8f9fa; */
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 250px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    text-align: center;
+    /* padding: 20px; */
+    transition: transform 0.3s ease;
+    cursor: grabbing;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Profile picture styling */
+.team-card img {
+    width: 100%;
+    /* width: 100px;
+    height: 100px; */
+    /* object-fit: contain; */
+    border-radius: 10px; /* Ensures the image is circular */
+    margin-bottom: 15px;
+}
+
+/* Name and position text styling */
+.team-card h4 {
+    margin: 0px 0 1px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.team-card p {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+
+@media (max-width: 756px){
+    .team-container {
+        
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}
