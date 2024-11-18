@@ -24,3 +24,74 @@ function toggleFaq(card) {
         activeFaq = null;
     }
 }
+
+
+
+//gallery-js
+document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+    const lightbox = document.querySelector(".lightbox");
+    const lightboxImg = document.querySelector(".lightbox-img");
+    const closeBtn = document.querySelector(".lightbox-close");
+    const prevBtn = document.querySelector(".lightbox-prev");
+    const nextBtn = document.querySelector(".lightbox-next");
+
+    let currentIndex = 0;
+    let currentCategory = "all";
+
+    // Tabs filter functionality
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            currentCategory = tab.getAttribute("data-category");
+            galleryItems.forEach(item => {
+                if (currentCategory === "all" || item.getAttribute("data-category") === currentCategory) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+
+    // Open lightbox on gallery item click
+    galleryItems.forEach((item, index) => {
+        item.addEventListener("click", () => {
+            currentIndex = index;
+            currentCategory = item.getAttribute("data-category");
+            openLightbox(item.querySelector("img").src);
+        });
+    });
+
+    function openLightbox(src) {
+        lightboxImg.src = src;
+        lightbox.classList.add("fade-in");
+        lightbox.style.display = "flex";
+    }
+
+    // Close lightbox
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    // Navigate to the previous image
+    prevBtn.addEventListener("click", () => {
+        const items = Array.from(galleryItems).filter(item => 
+            currentCategory === "all" || item.getAttribute("data-category") === currentCategory
+        );
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        lightboxImg.src = items[currentIndex].querySelector("img").src;
+    });
+
+    // Navigate to the next image
+    nextBtn.addEventListener("click", () => {
+        const items = Array.from(galleryItems).filter(item => 
+            currentCategory === "all" || item.getAttribute("data-category") === currentCategory
+        );
+        currentIndex = (currentIndex + 1) % items.length;
+        lightboxImg.src = items[currentIndex].querySelector("img").src;
+    });
+});

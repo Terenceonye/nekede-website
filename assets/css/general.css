@@ -25,6 +25,13 @@ email: onyeweketerence@gmail.com
     --secondary: #D1634A;
 }
 
+p {
+    font-size: 1.25rem; /* Larger font size (1.25 times the base font size) */
+    font-weight: 300;   /* Lighter font weight */
+    line-height: 1.6;
+    /*  */
+}
+
 /* GENERAL CSS FOR THE TITLES AND SECTION CAPTIONS */
 
 .head-box {
@@ -86,6 +93,13 @@ email: onyeweketerence@gmail.com
     color: var(--primary);
     font-weight: 500px;
     margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.designation {
+    font-size: 16px;
+    margin: 0 auto;
+    color: var(--secondary);
 }
 
 
@@ -126,4 +140,36 @@ ol li::before {
 
 ol {
     counter-reset: list-item; /* Start counting from 1 */
+}
+
+
+
+/* modals */
+/* Custom Modal Title */
+.modal-header .sm-sub-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Custom Close Button */
+.modal-header .close {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Custom Button */
+.button_one {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.button_one:hover {
+    background-color: #0056b3; /* Darker shade of primary */
+    color: #fff;
 }
