@@ -63,24 +63,53 @@ p {
 /* other pages hero */
 
 .other-hero {
-    height: 20vh; /* Adjust height dynamically relative to the viewport */
-    background-image: url('../img/background-img.png');
-    background-size: cover; /* Ensure the image covers the entire area */
+    min-height: 20vh; /* Dynamic height relative to the viewport */
+    background-image: url('../img/background-img.png'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image fully covers the hero section */
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
-    width: 100%; /* Full width of parent container */
+    width: 100%; /* Full width of the parent container */
+    display: flex; /* Use flexbox for aligning content */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* For additional overlays if needed */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
+
 .hero-content {
     text-align: center;
-    color: white; /* Or any contrasting color */
-    padding: 1rem; /* Space around content */
+    color: white; /* Contrasting color for readability */
+    padding: 1rem; /* Space around the content */
     font-size: 1.5rem; /* Adjust font size as needed */
-    /* transform: translateY(50%); */
+    line-height: 1.5; /* Improve readability */
+    max-width: 90%; /* Limit content width for better layout on smaller screens */
 }
 
 .hero-content p {
-    font-size: 14px;
+    font-size: 14px; /* Adjust for smaller text */
+    margin: 0.5rem 0; /* Consistent spacing */
 }
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .other-hero {
+        height: 25vh; /* Increase height on smaller screens */
+    }
+
+    .hero-content {
+        font-size: 1.2rem; /* Reduce font size slightly */
+    }
+
+    .hero-content p {
+        font-size: 12px; /* Adjust paragraph font size for readability */
+    }
+}
+
+
+
+/* hero ends */
+
 
 .profile-pic {
     max-width: 100%;
