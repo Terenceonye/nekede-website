@@ -1,0 +1,84 @@
+/*********************************************************
+Footer Section
+**********************************************************/
+.footer-section{
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 5rem;
+    overflow-x: hidden;
+}
+
+.footer-section .row-wrapper{
+    padding: 4.5rem 3rem 3rem;
+}
+
+.footer-section p{
+    font-size: 15px;
+}
+.footer-section a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-section .quick-link,
+.footer-section .reach-us{
+    padding: 0 2rem;
+}
+
+.footer-section .about-us .social-links a{
+   padding: .4rem .5rem;
+   background-color: #334f79;
+   border-radius: 50%;
+   
+   
+}
+
+
+.footer-section .copyright{
+    padding: 1rem 0;
+    background-color: var(--secondary);
+
+}
+
+.footer-section .search-box input{
+    width: 60%;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding-left: 1rem;
+    padding-right: .2rem;
+}
+
+.footer-section .search-box{
+    min-width: 250px;
+    background-color: #fff;
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+}
+
+.footer-section .search-box button{
+    
+    border: none;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    padding: .5rem 2rem;
+    font-size: 14px;
+}
+
+@media (max-width: 991px) {
+    .footer-section .row .col-md-6{
+        margin-bottom: 2rem;
+        padding: 0 !important;
+    }
+}
+@media (max-width: 768px) {
+   
+
+    .footer-section .search-box{
+        max-width: 350px;
+        margin-top: 2rem;
+    }
+}

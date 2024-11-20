@@ -5,6 +5,478 @@ email: onyeweketerence@gmail.com
 
 ************************************--> */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+:root {
+    --primary: #002357;
+    --secondary: #D1634A;
+}
+
+/* GENERAL CSS FOR THE TITLES AND SECTION CAPTIONS */
+
+.head-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.head-box .title{
+    display: flex;
+    align-items: baseline;
+}
+.head-box .title img{
+    display: inline-block;
+    /* height: 3px; */
+    padding-bottom: 3px;
+    margin-right: 10px;
+}
+
+.head-box h2 {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.head-box .title p {
+    color: var(--primary);
+}
+
+
+ /*****************************************
+  Hero Section
+  *******************************************/
+.hero {
+    height: auto;
+    /* background-image: url(../img/hero-img.png); */
+    background-position: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background: linear-gradient(rgba(94, 91, 146, 0.3), rgba(71, 52, 108, 0.8)), url(../img/hero-img.jpg);
+
+    color: #fff;
+    padding: 2rem 3rem 2rem 2rem;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+ }
+.hero .hero-wrapper{
+    position: relative;
+}
+
+ .hero h1{
+    font-size: 50px;
+    line-height: 68px;
+ }
+
+/* hero button animation and transition start */
+
+ .tour {
+    margin: 2rem 0 3rem;
+}
+
+.tour a {
+    text-decoration: none;
+}
+
+.tour-btn {
+    background-color: #fff;
+    color: var(--primary);
+    text-align: center;
+    padding: 0.6rem 2rem;
+    border-radius: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+    border: 2px solid var(--primary);
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative; /* For pseudo-elements */
+    overflow: hidden; /* Ensure animations stay within button bounds */
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Add a ripple animation using pseudo-elements */
+.tour-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.tour-btn:hover::before {
+    width: 300%;
+    height: 300%;
+    opacity: 0;
+}
+
+/* Hover effects on the button itself */
+.tour-btn:hover {
+    color: #fff; /* Change text color */
+    background-color: var(--secondary); /* Fill with primary color */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Create a hover shadow */
+    transform: translateY(-5px); /* Lift the button */
+    border-color: var(--secondary);
+}
+
+/* Active (pressed) state */
+.tour-btn:active {
+    transform: translateY(2px) scale(0.98); /* Slight press effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Reduced shadow */
+}
+
+
+/* hero buton effect stop */
+
+ .hero .blur-content{
+    width: 74vw;
+    /* position: absolute; */
+    padding-top: 1rem;
+    background: linear-gradient(96.69deg, rgba(255, 255, 255, 0.371) 0%, rgba(153, 153, 153, 0.28) 100%);
+    backdrop-filter: blur(20px);
+    border-radius: 17px;
+    padding: .6rem 1rem;
+    transform: translate(3%, 20%);
+    margin-bottom: 7rem;
+ }
+
+ .hero .right-content-img{
+    height: 100%;
+ }
+
+ .hero  .col-lg-6{
+    height: 78vh;
+ }
+
+ .hero .hero-box{
+    position: absolute;
+    bottom: -9em;
+    left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 1rem;
+ }
+
+ .hero .hero-box .box{
+    background-color: #fff;
+    color: var(--primary);
+    border-radius: 20px;
+    box-shadow: 0px 3px 25px 0px #0000001A;
+    padding: 1rem;
+ }
+
+ .hero .hero-box .box h4{
+    font-size: 23px;
+    font-weight: 700;
+ }
+
+ .hero .hero-box .box a{
+    text-decoration: underline;
+ }
+
+ @media (max-width: 1200px){
+    .hero {
+        /* height: 120vh; */
+        color: #fff;
+        padding: 2rem 3rem 0 2rem;
+        border-radius: 20px;
+     }
+     .hero  .col-lg-6{
+        height: 84vh;
+     }
+
+     .hero .blur-content{
+        margin-bottom: 2rem;
+     }
+     .hero .hero-box{
+        /* width: fit-content;
+        margin: auto; */
+        position: absolute;
+        bottom: -16rem;
+        
+     }
+
+     .about-section{
+        margin-top: 20rem !important;
+     }
+ }
+
+ @media (max-width: 991px){
+    .container.hero{
+        /* margin: 0;
+        width: 100% !important; */
+        border-radius: 0;
+        
+    
+    }
+    .container.hero{
+        width: 100% !important; 
+        max-width: 100% ;
+    }
+
+     .hero  .col-lg-6{
+        /* height: auto; */
+     }
+    .hero {
+        height: fit-content;
+        padding-bottom: 0;
+    }
+    .hero .right-content-img{
+        display: none !important;
+    }
+    .hero .hero-box{
+        position: absolute;
+        bottom: -33rem;
+        left: 1rem;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        row-gap: 1rem;
+     }
+
+     .about-section{
+        margin-top: 40rem !important;
+     }
+ }
+
+ @media (max-width: 768px){
+    .hero  .col-lg-6{
+        /* height: 60vh; */
+     }
+
+    .hero h1{
+        font-size: 30px;
+     }
+     .hero .hero-box{
+        position: absolute;
+     }
+}
+@media (min-width: 576px) {
+    .hero  .col-lg-6{
+        /* height: 80vh; */
+     }
+    .container.hero{
+        /* width: 100% !important; */
+        /* max-width: 100% ; */
+    }
+}
+
+
+ /*****************************************
+  About Section
+  *******************************************/
+  .about-section{
+    margin-top: 12rem;
+    margin-bottom: 7rem;
+ }
+ .about-section .title {
+    display: flex;
+    align-items:baseline;
+}
+
+.about-section .title p{
+    font-size: 18px;
+}
+
+.about-section .content h4{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.about-img{
+    height: 400px;
+    width: 100%;
+    background-position: center !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background: linear-gradient(rgba(94, 91, 146, 0.3), rgba(71, 52, 108, 0.8)), url(../img/hero-img.jpg);
+    border-radius: 20px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.about-section .about-content-wrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1.5rem;
+}
+
+/* .about-section .about-img .box{
+    background: linear-gradient(96.69deg, rgba(255, 255, 255, 0.371) 0%, rgba(153, 153, 153, 0.28) 100%);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    border-radius: 17px;
+    padding: 1.5rem 1rem;
+} */
+
+/* fliping the small box on hover */
+
+
+.about-content-wrapper .box {
+     /* Set consistent width for each box */
+    height: 150px; /* Set consistent height for each box */
+    perspective: 1000px; /* Enable 3D perspective for flip animation */
+    position: relative; /* For child positioning */
+    cursor: move;
+}
+
+.about-content-wrapper .box-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* Enable 3D transformation */
+    transition: transform 0.6s ease; /* Smooth flip effect */
+}
+
+.about-content-wrapper .box:hover .box-inner {
+    transform: rotateY(180deg); /* Flip the box */
+}
+
+.about-content-wrapper .box-front,
+.about-content-wrapper .box-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when front is visible */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Aligns text properly */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.about-content-wrapper .box-front {
+    background: linear-gradient(96.69deg, rgba(255, 255, 255, 0.371) 0%, rgba(153, 153, 153, 0.28) 100%);
+}
+
+.about-content-wrapper .box-back {
+    background: var(--secondary); /* Different background for back */
+    transform: rotateY(180deg); /* Flip position for back side */
+    border: 1.5px solid white;
+}
+.box-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.box-back i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* flippin ends */
+
+
+.about-section .about-img .box p{
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+    .about-img{
+        height: fit-content;
+    }
+    .about-section .about-content-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 460px) {
+    .about-section .about-img .box{
+        padding: 1.5rem .5rem;
+        text-align: center;
+    }
+    .about-section .about-img .box p{
+        font-size: 14px;
+    }
+    .about-section .about-img .box h5{
+        font-size: 1.1rem;
+    }
+}
+
+
+ /*****************************************
+  Our Program Section
+  *******************************************/
+.our-program-section{
+    padding-bottom: 6rem;
+}
+.our-program-section .owl-dots {
+    text-align: center;
+    margin-top: 2rem;
+}
+.our-program-section .owl-dots .owl-dot {
+    height: 5px;
+    width: 20px;
+    border-radius: 2px;
+    background: #ccc !important;
+    margin-left: 3px;
+    margin-right: 3px;
+    outline: none;
+}
+.our-program-section .owl-dots .owl-dot.active {
+    background: #002357 !important;
+}
+
+.our-program-section .read-post span{
+    text-decoration: underline;
+}
+
+.our-program-section .owl-nav button{
+     display: none;                   
+}
+
+
+
+
+/* animation for owl carousel items */
+
+/* Ensure items are centered and have some space */
+.owl-carousel .item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+.owl-carousel .item:hover {
+    transform: translateY(-10px); /* Scales up the item */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds shadow effect on hover */
+}
+
+
+
+ 
+ 
  /*****************************************
   Girl with head section styling 
   *******************************************/
@@ -143,11 +615,28 @@ OUR TEAM SECTION
 
 
 
+/* owl team style */
+
+.team-container .owl-dots .owl-dot.active span {
+    background-color: var(--secondary); /* Color when the dot is active */
+}
+
+
+
 /*****************************************************
  BLOG CSS 
  *****************************************************/
 /* using owl carousel for structure */
 /* blog image styling */
+.blog-container{
+    padding: 1rem;
+}
+.blog-container .blog-card{
+    box-shadow: 0px 3px 25px 0px #0000001A;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
 .blog-card > img {
     width: 100%;
     height: auto;
@@ -165,6 +654,11 @@ OUR TEAM SECTION
     margin: 10px 0;
     font-size: 1.2rem;
     font-weight: bold;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
 }
 
 .blog .read-post {
@@ -181,7 +675,7 @@ OUR TEAM SECTION
 }
 
 .blog .read-post img {
-    width: 20px;
+    width: 20px !important;
     height: 20px;
     margin-left: 10px; /* Adds a margin on the left of the icon */
     transition: transform 0.4s ease;
@@ -334,7 +828,7 @@ Contact Section
   }
   
   .contact .my-email-form button[type=submit]:hover {
-    background: color-mix(in srgb, var(--primary), transparent 25%);
+    background: color-mix(in srgb, var(--secondary), transparent 0%);
   }
 
 
@@ -404,7 +898,7 @@ Contact Section
     transform: scale(1);
   }
 .contact .info-item .social img:hover {
-    background-color: #00235786;
+    background-color: var(--secondary);
     transform: scale(1.05);
     transition: transform background .2s ease;
 }
@@ -415,3 +909,5 @@ Contact Section
       padding: 20px;
     }
   }
+
+

@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Include Header and footer
+    $(document).ready(function() {
+        // Load Header
+        $("#header").load("header.html");
+
+        // Load Footer
+        $("#footer").load("footer.html");
+    });
+})
+
+
+
+
 let activeFaq = null;
 
 function toggleFaq(card) {
@@ -95,3 +109,34 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.src = items[currentIndex].querySelector("img").src;
     });
 });
+
+
+// Header scripts
+  // Script to open and close sidebar
+  function navba_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+    }
+ 
+    function navba_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+    }
+ 
+     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+  var dropdown = document.getElementsByClassName("dropdown-button");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  }
+ 
+    
