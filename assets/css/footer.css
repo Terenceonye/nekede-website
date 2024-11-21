@@ -16,8 +16,13 @@ Footer Section
     font-size: 15px;
 }
 .footer-section a{
+    font-size: 16px !important;
     text-decoration: none;
     color: #fff;
+}
+
+.footer-section h4{
+    font-size: 1.2rem;
 }
 
 .footer-section .quick-link,
@@ -29,15 +34,11 @@ Footer Section
    padding: .4rem .5rem;
    background-color: #334f79;
    border-radius: 50%;
-   
-   
 }
-
 
 .footer-section .copyright{
     padding: 1rem 0;
     background-color: var(--secondary);
-
 }
 
 .footer-section .search-box input{

@@ -20,16 +20,25 @@ email: onyeweketerence@gmail.com
     "YTLC" 500;
 }
 
+main{
+    overflow-x: hidden !important;
+}
+
 :root {
     --primary: #002357;
     --secondary: #D1634A;
 }
 
 p, a, li, a, span, .dropbtn {
-    font-size: 1.2rem !important; 
+    font-size: 1.1rem !important; 
     font-weight: 300 !important;  
     line-height: 1.6 !important;
+}
 
+@media (max-width: 640px) {
+    p, a, li, a, span, .dropbtn {
+        font-size: 1rem !important; 
+    }
 }
 
 .navba .dropdown .dropbtn, .navba-links ul li a{
@@ -231,6 +240,12 @@ ol {
 }
 
 .button_one:hover {
-    background-color: #0056b3; /* Darker shade of primary */
+    background-color: var(--secondary); /* Darker shade of primary */
     color: #fff;
 }
+
+@media (max-width: 460px)  {
+    .top-nav p a{
+      font-size: .8rem !important;
+    }
+  }

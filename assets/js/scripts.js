@@ -1,13 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Include Header and footer
-    $(document).ready(function() {
+    // Load Header and Footer
+    $(document).ready(function () {
         // Load Header
-        $("#header").load("header.html");
+        $("#header").load("header.html", function () {
+            initializeDropdowns(); // Initialize dropdowns after the header is loaded
+        });
 
         // Load Footer
         $("#footer").load("footer.html");
     });
-})
+
+    function initializeDropdowns() {
+        // Attach event listeners to dropdown buttons
+        var dropdown = document.getElementsByClassName("dropdown-button");
+        for (var i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    }
+});
+
 
 
 
@@ -123,22 +142,4 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("myOverlay").style.display = "none";
     }
  
-     /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-  var dropdown = document.getElementsByClassName("dropdown-button");
-  var i;
-  
-  for (i = 0; i < dropdown.length; i++) {
-    dropdown[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var dropdownContent = this.nextElementSibling;
-      if (dropdownContent.style.display === "block") {
-        dropdownContent.style.display = "none";
-      } else {
-        dropdownContent.style.display = "block";
-      }
-    });
-  }
- 
     
-// adjusting my aos offset on mobile view
-
