@@ -140,3 +140,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
  
     
+// adjusting my aos offset on mobile view
+
